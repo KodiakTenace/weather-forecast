@@ -5,6 +5,7 @@ version: '3.4'
 services:
   infraweb:
     image: infraweb
+    platform: linux/amd64
     depends_on: 
       - infraapi
     build:
@@ -16,6 +17,7 @@ services:
       - 3000:5000
   infraapi:
     image: infraapi
+    platform: linux/amd64
     build:
       context: .
       dockerfile: infra-api/Dockerfile
